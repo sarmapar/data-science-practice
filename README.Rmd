@@ -4,10 +4,3 @@ output: html_document
 ---
 
 This is a project by Sarah Parker analyzing data on various superheroes. It uses the heroes dataset from [kaggle](https://www.kaggle.com/datasets/claudiodavi/superhero-set)
-
-
-
-
-Include in your README:
-- A description (1-2 sentences) about your dataset
-- Your name
