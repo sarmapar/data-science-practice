@@ -12,10 +12,12 @@ ggplot(data = hero_data, aes(x = Height, y = Weight)) +
 View(hero_data)
 names(hero_data)
 
-plot <- hero_data %>%
+hero_data %>%
           filter(Height != -99) %>%
           ggplot(aes(x = as.numeric(Height))) +
-          geom_density()
+          geom_density() +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 plot
 
@@ -25,3 +27,6 @@ ggplot(new_data, aes(x = as.numeric(Height))) +
   geom_density()
 
 hero_data$Height <- sub(-99, NA, hero_data$Height)
+
+
+View(hero_data)
