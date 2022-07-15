@@ -31,6 +31,8 @@ filter(starwars, hair_color %in% c("blond","blonde"))
 
 importantPlanets <- c("Tatooine", "Naboo", "Mustafar")
 filter(starwars, homeworld %in% importantPlanets)
+new_hope_chars <- filter(starwars, "A New Hope" %in% films)
+
 
 filter(starwars, hair_color == "blond" & species == "Human")
 filter(starwars, species == "Human", homeworld == "Tatooine", skin_color == "fair")
@@ -89,6 +91,11 @@ mass ==  10 # returns NA
 is.na(mass) # return true
 
 ```
+
+`Publisher == "Nintendo"` only returns columns that exactly match "Nintendo"
+`"Nintendo" %in% Publisher` returns columns that contain "Nintendo"
+
+a row with the value `"Nintendo, other company"` under `Publisher` will return FALSE when using `==`, but will return TRUE when using `%in%`
 
 
 ### Arranging data
